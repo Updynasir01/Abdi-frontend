@@ -5,6 +5,8 @@ import {toast, Toaster} from "react-hot-toast"
 import { useState } from "react"
 import { useEffect } from "react";
 import D from "../assets/images/D.jpg"
+import { Link } from "react-router-dom";
+
 
 
 
@@ -78,7 +80,10 @@ function Contact () {
 
 
 
-    return <div className="flex justify-center  pt-16">
+    return <div className="relative" >
+      <div className="flex justify-center  pt-16">
+
+ 
     
           <div className=" flex  gap-4 rounded-md ">
             <div className="sm:p-4">
@@ -130,13 +135,16 @@ function Contact () {
 
                 <textarea  className="rounded-md border sm:hidden p-2 border-[#5e3bee] "  cols={"45"}    ></textarea><br />
                 <textarea  className="rounded-md border sm:block hidden  p-2 border-[#5e3bee] "  cols={"64"}    ></textarea><br />
-                <button  className="w-[135px] mt h-[50px] border bg-[#5e3bee] hover:bg-white text-white border-[#5e3bee] hover:text-[#5e3bee] ml-[33%] rounded-md">Submit</button>
+                <Link to="/Cong"><button className="w-[135px] mt h-[50px] border bg-[#5e3bee] hover:bg-white text-white border-[#5e3bee] hover:text-[#5e3bee] ml-[33%] rounded-md">Submit</button></Link>
+                
 
                 </div>
             </div>
         
           </div>
           <div><Toaster/></div>
+          </div>
+          
 
     </div>
 }
